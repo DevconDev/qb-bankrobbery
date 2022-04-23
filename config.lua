@@ -5,8 +5,8 @@ Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use qb-target in
 Config.ItemTiers = 1
 
 Config.MinimumPaletoPolice = 4
-Config.MinimumPacificPolice = 5
-Config.MinimumFleecaPolice = 3
+Config.MinimumPacificPolice = 4
+Config.MinimumFleecaPolice = 4
 Config.MinimumThermitePolice = 2
 Config.OutlawCooldown = 5 -- The amount of minutes it takes for the cops to be able to be called again after they were called
 
