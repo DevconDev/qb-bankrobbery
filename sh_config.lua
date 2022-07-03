@@ -1,16 +1,41 @@
 Config = Config or {}
 
+<<<<<<< Updated upstream:sh_config.lua
+--- This is called whenever an item check occurs
+---
+--- Accepted formats for `items`:
+--- ```lua
+--- 'itemName'
+---
+--- {'item1', 'item2', 'etc'}
+---
+--- {['item1'] = amount, ['item2'] = 2, ['etc' = 5]} -- the amount here is the amount needed of that item, if the amount variable is defined when this format is used, the amount variable will be prioritized
+--- ```
+--- @param items table | array | string
+--- @param amount number | nil
+--- @return boolean
+function Config.HasItem(items, amount)
+    return QBCore.Functions.HasItem(items, amount)
+end
+=======
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use qb-target interactions (don't change this, go to your server.cfg and add `setr UseTarget true` to use this and just that from true to false or the other way around)
 
 Config.ItemTiers = 1
 
+<<<<<<< HEAD:config.lua
 Config.MinimumPaletoPolice = 4
 Config.MinimumPacificPolice = 4
 Config.MinimumFleecaPolice = 4
 Config.MinimumThermitePolice = 2
+=======
+Config.MinimumPaletoPolice = 0
+Config.MinimumPacificPolice = 0
+Config.MinimumFleecaPolice = 0
+Config.MinimumThermitePolice = 0
+>>>>>>> pr/2:sh_config.lua
 Config.OutlawCooldown = 5 -- The amount of minutes it takes for the cops to be able to be called again after they were called
 
-Config.HitsNeeded = 13 -- The amount of powerstation needed to be hit to cause a blackout
+Config.HitsNeeded = 1 -- The amount of powerstation needed to be hit to cause a blackout
 Config.BlackoutTimer = 10 -- The amount of minutes a blackout will take until all power comes back
 
 Config.RewardTypes = {
@@ -165,6 +190,7 @@ Config.CameraHits = {
         stationsToHitPolice = {12, 13}
     }
 }
+>>>>>>> Stashed changes:config.lua
 
 Config.PowerStations = {
     [1] = {
@@ -343,7 +369,7 @@ Config.SmallBanks = {
         ["isOpened"] = false,
         ["lockers"] = {
             [1] = {
-                ["coords"] = vector3(350.99, -54.13, 49.01),
+                ["coords"] = vector3(-350.99, -54.13, 49.01),
                 ["isBusy"] = false,
                 ["isOpened"] = false
             },
